@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/tailwindcss/tailwind.min.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
   <header class="site-header">
@@ -39,7 +40,7 @@
 
       <section>
         <h2>Модели</h2>
-        <div class="product-grid">
+        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <article class="product-card">
             <img class="product-card__image" src="images/aula-f75-keyboard.jpg" alt="Механическая клавиатура AULA F75">
             <div class="product-card__content">

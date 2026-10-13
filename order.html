@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заявки Vertex.">
+  <title>Заявка — Vertex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/tailwindcss/tailwind.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container flex flex-wrap items-center justify-between gap-4">
+      <a class="logo" href="index.html">Vertex</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list flex flex-wrap gap-2">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="product.html">Товар</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="section container max-w-2xl">
+    <h1>Заявка на товар</h1>
+    <form class="space-y-4 mt-4" id="order-form">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="font-bold" for="order-name">Имя</label>
+          <input class="w-full mt-2 p-2 border-2 border-ink rounded-xl" id="order-name" name="name" type="text" required>
+        </div>
+        <div>
+          <label class="font-bold" for="order-email">E-mail</label>
+          <input class="w-full mt-2 p-2 border-2 border-ink rounded-xl" id="order-email" name="email" type="email" required>
+        </div>
+      </div>
+      <div>
+        <label class="font-bold" for="order-phone">Телефон</label>
+        <input class="w-full mt-2 p-2 border-2 border-ink rounded-xl" id="order-phone" name="phone" type="tel" required>
+      </div>
+      <div>
+        <label class="font-bold" for="order-model">Модель</label>
+        <select class="w-full mt-2 p-2 border-2 border-ink rounded-xl" id="order-model" name="model" required>
+          <option value="">Выберите модель</option>
+          <option value="logitech-g713">Logitech G713</option>
+          <option value="logitech-mx-master-4">Logitech MX Master 4</option>
+        </select>
+      </div>
+      <div>
+        <label class="font-bold" for="order-comment">Комментарий</label>
+        <textarea class="w-full mt-2 p-2 border-2 border-ink rounded-xl" id="order-comment" name="comment" rows="4"></textarea>
+      </div>
+      <label class="flex items-center gap-2 font-bold">
+        <input type="checkbox" required> Согласен на обработку данных
+      </label>
+      <div class="flex gap-3">
+        <button class="button" type="submit">Отправить</button>
+        <a class="button button--secondary" href="index.html">Назад</a>
+      </div>
+      <p class="form-message" id="form-message" hidden>Заявка отправлена.</p>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container"><p>Учебный проект Vertex</p></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
