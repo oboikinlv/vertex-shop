@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный пример небольшого каталога компьютерной периферии.">
+  <title>Vertex — компьютерная периферия</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Vertex</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#popular">Популярное</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Компьютерная периферия для дома и работы</h1>
+        <p>Небольшой учебный каталог с примерами семантической разметки, карточки товара и формы заявки.</p>
+        <a class="button" href="catalog.html">Перейти в каталог</a>
+      </div>
+    </section>
+
+    <section class="section" id="popular">
+      <div class="container">
+        <h2>Популярные модели</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img class="product-card__image" src="images/logitech-g713-keyboard.jpg" alt="Игровая клавиатура Logitech G713">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Logitech G713</h3>
+              <p>Игровая клавиатура с подсветкой LIGHTSYNC.</p>
+              <p class="product-card__price">13 500 ₽</p>
+              <button class="button" type="button" data-order-model="logitech-g713">Оставить заявку</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/logitech-mx-master-4-mouse.jpg" alt="Беспроводная мышь Logitech MX Master 4">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Logitech MX Master 4</h3>
+              <p>Продвинутая беспроводная мышь для нескольких устройств.</p>
+              <p class="product-card__price">11 900 ₽</p>
+              <button class="button" type="button" data-order-model="logitech-mx-master-4">Оставить заявку</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/steelseries-arctis-nova-5-headset.jpg" alt="Игровая гарнитура SteelSeries Arctis Nova 5">
+            <div class="product-card__content">
+              <h3 class="product-card__title">SteelSeries Arctis Nova 5</h3>
+              <p>Беспроводная игровая гарнитура с чистым микрофоном.</p>
+              <p class="product-card__price">8 000 ₽</p>
+              <button class="button" type="button" data-order-model="steelseries-arctis-nova-5">Оставить заявку</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="advantages">
+      <div class="container">
+        <h2>Почему Vertex</h2>
+        <p>Простой дизайн, понятные характеристики и несколько базовых моделей без перегруженного каталога.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container">
+      <p>Учебный проект Vertex</p>
+    </div>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog">
+    <form class="order-form" id="order-form" action="#" method="post">
+      <h2>Заявка на товар</h2>
+
+      <label for="order-name">Имя</label>
+      <input id="order-name" name="name" type="text" minlength="2" maxlength="50" autocomplete="name" required>
+
+      <label for="order-email">E-mail</label>
+      <input id="order-email" name="email" type="email" placeholder="name@example.ru" autocomplete="email" required>
+
+      <label for="order-phone">Телефон</label>
+      <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" pattern="\+7[0-9]{10}" autocomplete="tel" required>
+
+      <label for="order-model">Модель</label>
+      <select id="order-model" name="model" required>
+        <option value="">Выберите модель</option>
+        <option value="aula-f75">AULA F75</option>
+        <option value="aula-f75-pro">AULA F75 Pro</option>
+        <option value="keychron-k3">Keychron K3</option>
+        <option value="keychron-v3-max">Keychron V3 Max</option>
+        <option value="logitech-g713">Logitech G713</option>
+        <option value="rk-r65">RK ROYAL KLUDGE R65</option>
+        <option value="rk-r98-pro">RK ROYAL KLUDGE R98 Pro</option>
+        <option value="lamzu-thorn-v2">Lamzu Thorn V2</option>
+        <option value="logitech-g-pro-x2-superstrike">Logitech G PRO X2 Superstrike</option>
+        <option value="logitech-mx-master-4">Logitech MX Master 4</option>
+        <option value="steelseries-arctis-nova-1">SteelSeries Arctis Nova 1</option>
+        <option value="steelseries-arctis-nova-5">SteelSeries Arctis Nova 5</option>
+        <option value="logitech-g735">Logitech G735</option>
+        <option value="xbox-wireless-controller">Xbox Wireless Controller</option>
+      </select>
+
+      <label for="order-date">Желаемая дата связи</label>
+      <input id="order-date" name="contact-date" type="date">
+
+      <input name="source" type="hidden" value="main-page">
+
+      <label for="order-comment">Комментарий</label>
+      <textarea id="order-comment" name="comment" rows="4" maxlength="300" placeholder="Дополнительная информация"></textarea>
+
+      <label class="checkbox-label" for="order-agreement">
+        <input id="order-agreement" name="agreement" type="checkbox" required>
+        Согласен на обработку данных
+      </label>
+
+      <p class="form-message" id="form-message" hidden>Заявка отправлена.</p>
+
+      <div class="form-actions">
+        <button class="button" type="submit">Отправить</button>
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
